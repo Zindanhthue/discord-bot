@@ -5,7 +5,8 @@ import asyncio
 import random
 from youtubesearchpython import VideosSearch
 
-BOT_TOKEN = "MTM1NTM0NzM4MzMyNzY1ODE1NQ.GG-dfu.hsASzzMSb89lFFWcn0HBS9KegfqYfCXGAtShuk"  # Thay bằng token bot của bạn
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = 741648403515310171
 VOICE_CHANNEL_ID = 1355347950309478530  # ID kênh thoại bot sẽ vào
 TEXT_CHANNEL_ID = 1245993933511593988  # ID kênh bot nhận lệnh
