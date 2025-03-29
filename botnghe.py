@@ -6,7 +6,14 @@ import random
 from youtubesearchpython import VideosSearch
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load biến môi trường từ file .env
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN:
+    raise ValueError("❌ Không tìm thấy BOT_TOKEN! Kiểm tra lại file .env.")
+
 OWNER_ID = 741648403515310171
 VOICE_CHANNEL_ID = 1355347950309478530  # ID kênh thoại bot sẽ vào
 TEXT_CHANNEL_ID = 1245993933511593988  # ID kênh bot nhận lệnh
